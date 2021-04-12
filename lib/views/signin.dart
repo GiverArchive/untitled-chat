@@ -11,7 +11,7 @@ class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: appBarSignIn(context),
+        appBar: appBarMain(context),
         body: SingleChildScrollView(
           child: Container(
             height: MediaQuery.of(context).size.height - 50,
@@ -63,7 +63,7 @@ class _SignInState extends State<SignIn> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text("Não tem uma conta? ", style: mediumTextStyle()),
-                        Text("Registrar agora!",
+                        Text("Cadastrar-se.",
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 17,
