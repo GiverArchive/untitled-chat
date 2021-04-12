@@ -26,14 +26,14 @@ class _SignInState extends State<SignIn> {
                         decoration: textFieldDecoration("Email")),
                     TextField(
                         style: simpleTextStyle(),
-                        decoration: textFieldDecoration("Password")),
+                        decoration: textFieldDecoration("Senha")),
                     SizedBox(height: 8),
                     Container(
                         alignment: Alignment.centerRight,
                         child: Container(
                             padding: EdgeInsets.symmetric(
                                 horizontal: 16, vertical: 8),
-                            child: Text("Forgot password?",
+                            child: Text("Esqueceu a senha?",
                                 style: simpleTextStyle()))),
                     SizedBox(height: 8),
                     Container(
@@ -46,7 +46,7 @@ class _SignInState extends State<SignIn> {
                               const Color(0xFF2A75BC),
                             ]),
                             borderRadius: BorderRadius.circular(30)),
-                        child: Text("Sign in", style: mediumTextStyle())),
+                        child: Text("Entrar", style: mediumTextStyle())),
                     SizedBox(height: 16),
                     Container(
                         alignment: Alignment.center,
@@ -55,15 +55,15 @@ class _SignInState extends State<SignIn> {
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(30)),
-                        child: Text("Sign in with Google",
+                        child: Text("Entrar com o Google",
                             style: TextStyle(
                                 color: Colors.black87, fontSize: 17))),
                     SizedBox(height: 16),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text("Don't have account? ", style: mediumTextStyle()),
-                        Text("Register now!",
+                        Text("Não tem uma conta? ", style: mediumTextStyle()),
+                        Text("Registrar agora!",
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 17,
