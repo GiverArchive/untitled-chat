@@ -1,5 +1,5 @@
+import 'package:chat/helper/authenticate.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:chat/views/signup.dart';
 import 'package:flutter/material.dart';
 
 Future<void> main() async {
@@ -18,6 +18,6 @@ class App extends StatelessWidget {
             primaryColor: Color(0xFF145C9E),
             scaffoldBackgroundColor: Color(0xFF1F1F1F),
             primarySwatch: Colors.blue),
-        home: SignUp());
+        home: Authenticate());
   }
 }

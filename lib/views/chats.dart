@@ -1,3 +1,5 @@
+import 'package:chat/helper/authenticate.dart';
+import 'package:chat/services/auth.dart';
 import 'package:flutter/material.dart';
 
 class ChatsScreen extends StatefulWidget {
@@ -6,10 +8,27 @@ class ChatsScreen extends StatefulWidget {
 }
 
 class _ChatsScreenState extends State<ChatsScreen> {
+  AuthMethods authMethods = new AuthMethods();
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
+    return Scaffold(
+      appBar: AppBar(
+        title: Image.asset("assets/images/logo.png", height: 50),
+        actions: [
+          GestureDetector(
+              onTap: () {
+                authMethods.signOut();
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => Authenticate()));
+              },
+              child: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  child: Icon(Icons.exit_to_app)))
+        ],
+      ),
+      floatingActionButton:
+          FloatingActionButton(onPressed: () {}, child: Icon(Icons.search)),
     );
   }
 }
