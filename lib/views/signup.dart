@@ -1,4 +1,5 @@
 import 'package:chat/services/auth.dart';
+import 'package:chat/views/chats.dart';
 import 'package:chat/widgets/app_bar.dart';
 import 'package:chat/widgets/text.dart';
 import 'package:flutter/material.dart';
@@ -30,7 +31,9 @@ class _SignUpState extends State<SignUp> {
       authMethods
           .signUpWithEmailAndPassword(emailTextEditingController.text,
               passwordTextEditingController.text)
-          .then((value) {});
+          .then((user) {
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ChatsScreen()));
+      });
     }
   }
 
