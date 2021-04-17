@@ -1,4 +1,5 @@
 import 'package:chat/services/auth.dart';
+import 'package:chat/services/database.dart';
 import 'package:chat/views/chats.dart';
 import 'package:chat/widgets/app_bar.dart';
 import 'package:chat/widgets/text.dart';
@@ -22,6 +23,7 @@ class _SignUpState extends State<SignUp> {
       new TextEditingController();
 
   AuthMethods authMethods = new AuthMethods();
+  DatabaseMethods databaseMethods = new DatabaseMethods();
 
   bool isLoading = false;
   final formKey = GlobalKey<FormState>();
@@ -36,6 +38,12 @@ class _SignUpState extends State<SignUp> {
           .signUpWithEmailAndPassword(emailTextEditingController.text,
               passwordTextEditingController.text)
           .then((user) {
+        Map<String, String> userInfoMap = {
+          "name": usernameTextEditingController.text,
+          "email": emailTextEditingController.text
+        };
+
+        databaseMethods.uploadUserInfo(userInfoMap);
         Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => ChatsScreen()));
       });
