@@ -1,5 +1,6 @@
 import 'package:chat/helper/authenticate.dart';
 import 'package:chat/services/auth.dart';
+import 'package:chat/views/search.dart';
 import 'package:flutter/material.dart';
 
 class ChatsScreen extends StatefulWidget {
@@ -28,7 +29,9 @@ class _ChatsScreenState extends State<ChatsScreen> {
         ],
       ),
       floatingActionButton:
-          FloatingActionButton(onPressed: () {}, child: Icon(Icons.search)),
+          FloatingActionButton(onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) => SearchScreen()));
+          }, child: Icon(Icons.search)),
     );
   }
 }
