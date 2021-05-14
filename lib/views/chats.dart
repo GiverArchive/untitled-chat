@@ -18,20 +18,33 @@ class _ChatsScreenState extends State<ChatsScreen> {
         title: Image.asset("assets/images/logo.png", height: 50),
         actions: [
           GestureDetector(
-              onTap: () {
-                authMethods.signOut();
-                Navigator.pushReplacement(context,
-                    MaterialPageRoute(builder: (context) => Authenticate()));
-              },
-              child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16),
-                  child: Icon(Icons.exit_to_app)))
+            onTap: () {
+              authMethods.signOut();
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Authenticate(),
+                ),
+              );
+            },
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16),
+              child: Icon(Icons.exit_to_app),
+            ),
+          ),
         ],
       ),
-      floatingActionButton:
-          FloatingActionButton(onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => SearchScreen()));
-          }, child: Icon(Icons.search)),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => SearchScreen(),
+            ),
+          );
+        },
+        child: Icon(Icons.search),
+      ),
     );
   }
 }

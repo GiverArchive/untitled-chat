@@ -11,7 +11,9 @@ class AuthMethods {
   Future signInWithEmailAndPassword(String email, String password) async {
     try {
       UserCredential credential = await _auth.signInWithEmailAndPassword(
-          email: email, password: password);
+        email: email,
+        password: password,
+      );
       return _chatUserFromFirebaseUser(credential.user);
     } catch (e) {
       print(e.toString());
@@ -21,7 +23,9 @@ class AuthMethods {
   Future signUpWithEmailAndPassword(String email, String password) async {
     try {
       UserCredential credential = await _auth.createUserWithEmailAndPassword(
-          email: email, password: password);
+        email: email,
+        password: password,
+      );
       return _chatUserFromFirebaseUser(credential.user);
     } catch (e) {
       print(e.toString());
