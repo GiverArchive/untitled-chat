@@ -15,9 +15,10 @@ class App extends StatelessWidget {
       title: 'GiverChat',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          primaryColor: Color(0xFF145C9E),
-          scaffoldBackgroundColor: Color(0xFF1F1F1F),
-          primarySwatch: Colors.blue),
+        primaryColor: Color(0xFF145C9E),
+        scaffoldBackgroundColor: Color(0xFF1F1F1F),
+        primarySwatch: Colors.blue,
+      ),
       home: Authenticate(),
     );
   }
